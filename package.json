@@ -1,14 +1,16 @@
-{
-  "name": "mintproject",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "vite": "^7.3.1"
+
+  {
+    "name": "mindi-multiplayer",
+    "version": "1.0.0",
+    "description": "Multiplayer Mindi card game",
+    "main": "server/server.js",
+    "scripts": {
+      "start": "node server/server.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2",
+      "type": "module",
+      "socket.io": "^4.7.2"
+    }
   }
-}
+

@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Mindi Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Mindi Game</h1>
+
+    <div id="status">
+        Players Joined: <span id="playerCount">0</span>/4
+    </div>
+    <div id="nameSection">
+        <input type="text" id="playerName" placeholder="Enter your name">
+    </div>
+    <button id="join">Join Game</button>
+
+    <div id="message"></div>
+
+    <div id="infoBar">
+        <div id="trumpBox">
+            Trump: <span id="trumpIcon">-</span>
+        </div>
+        <div id="score">Score: -</div>
+    </div>
+    <div id="winnerPopup"></div>
+
+
+    <div id="lobby">
+
+        <h2>Lobby</h2>
+
+        <div id="lobbyPlayers"></div>
+
+        <button id="readyBtn">Ready</button>
+
+    </div>
+
+
+
+
+    <!-- TABLE -->
+    <div id="table" style="display:none;">
+
+        <div class="player top">Player Top</div>
+        <div class="player left">Player Left</div>
+        <div class="player right">Player Right</div>
+
+        <div id="center">
+            <img id="cardTop" class="tableCard">
+            <img id="cardLeft" class="tableCard">
+            <img id="cardRight" class="tableCard">
+            <img id="cardBottom" class="tableCard">
+        </div>
+
+        <div class="player bottom">
+
+            <div class="name" id="youLabel">You</div>
+
+            <div id="handContainer">
+                <div id="hand"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="./main.js"></script>
+
+</body>
+</html>

@@ -1,63 +1,220 @@
-/* Full page setup */
-body {
-    margin: 0;
-    height: 100vh;
+﻿body {
+    background: radial-gradient(circle, #1e7d22, #0b4d12);
+    font-family: Arial;
+    text-align: center;
+    color: white;
+}
+
+/* info */
+#infoBar {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    /* Green gradient background */
-    background: linear-gradient(135deg, #0f9b0f, #1e7d22);
+    gap: 40px;
+    margin: 10px;
 }
 
-/* Game container */
-.game-area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    margin: 20px;
+/* table container */
+#table {
+    position: relative;
+    width: 700px;
+    height: 500px;
+    margin: 30px auto;
+    background: #0f7a28;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 
-/* Player hand */
-.hand {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 20px;
-    background: black;
-}
-
-/* Card images */
-.card-img {
-    width: 90px;
-    transition: transform 0.2s;
-}
-
-    /* Hover effect */
-    .card-img:hover {
-        transform: scale(-1.1 , 1);
-    }
-
-/* Deck card */
-.deck-card {
-    width: 90px;
-}
-
-/* Button styling */
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    background: white;
+/* players */
+.player {
+    position: absolute;
     font-weight: bold;
-    transition: transform 0.15s;
 }
 
-    button:hover {
-        transform: scale(1.05);
+/* positions */
+.top {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bottom {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.left {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* center area */
+#center {
+    position: absolute;
+    width: 300px;
+    height: 220px;
+    background: #0b6623;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* cards in center */
+.tableCard {
+    position: absolute;
+    width: 70px;
+}
+
+#cardTop {
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#cardBottom {
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#cardLeft {
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#cardRight {
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* deck */
+#deck {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-200%, -50%);
+}
+
+.card {
+    width: 70px;
+}
+
+/* hand */
+#hand {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    justify-content: center;
+}
+/* bottom player */
+.bottom {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+/* 🔒 FIXED LABEL */
+#youLabel {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* 🔒 FIXED HAND AREA (prevents jump) */
+#handContainer {
+    min-height: 110px; /* important */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* cards */
+#hand {
+    display: flex;
+    gap: 8px;
+}
+
+/* Trump box */
+#trumpBox {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* suit colors */
+.heart, .diamond {
+    color: red;
+}
+
+.spade, .club {
+    color: white;
+}
+
+/* 🔥 highlight trump cards */
+.trump-card {
+    box-shadow: 0 0 10px gold;
+    border-radius: 10px;
+}
+
+    /* subtle glow animation */
+    .trump-card:hover {
+        transform: translateY(-10px) scale(1.05);
     }
+
+
+/* 🔥 winning card glow */
+.winner-glow {
+    box-shadow: 0 0 20px gold;
+    border-radius: 10px;
+}
+
+/* popup */
+#winnerPopup {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.8);
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 22px;
+    display: none;
+    z-index: 1000;
+}
+
+#nameSection {
+    margin: 10px;
+}
+
+#playerName {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+
+#lobby {
+    margin: 20px;
+    padding: 15px;
+    background: #0b6623;
+    border-radius: 10px;
+}
+
+#lobbyPlayers {
+    margin: 10px;
+    font-size: 18px;
+}
+
+.ready {
+    color: lightgreen;
+}

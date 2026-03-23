@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Server\\game",
+    "\\Server\\Models",
+    "\\Server\\rooms",
     "\\src"
   ],
   "SelectedNode": "\\src\\style.css",
