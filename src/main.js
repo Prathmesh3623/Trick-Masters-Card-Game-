@@ -1,6 +1,6 @@
 ﻿document.addEventListener("DOMContentLoaded", () => {
 
-const socket = io("http://localhost:3001")
+const socket = io("https://trick-masters-card-game.onrender.com")
 
 let myId = null
 let currentTurn = null
