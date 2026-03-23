@@ -4,12 +4,15 @@
     "version": "1.0.0",
     "description": "Multiplayer Mindi card game",
     "main": "server/server.js",
+    
+    "type": "module",
+    
     "scripts": {
       "start": "node server/server.js"
     },
     "dependencies": {
       "express": "^4.18.2",
-      "type": "module",
+      
       "socket.io": "^4.7.2"
     }
   }
