@@ -23,7 +23,7 @@ const io = new Server(server, {
 cors: { origin: "*" }
 })
 
-const PORT = 3001
+
 
 app.use(express.static("src"))
 app.use("/cards", express.static("cards"))
