@@ -92,3 +92,4 @@ http://localhost:5173
 ## Purpose
 
 This project demonstrates how a simple **game mechanic (drawing a card)** can be implemented using basic web technologies while maintaining clear and modular logic.
+# Trick-Masters-Card-Game-
